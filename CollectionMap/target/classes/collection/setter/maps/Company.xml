@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<bean name="company" class="collection.setter.maps.Company"
+	p:companyName="TestYantra">
+	
+	<property name="empIdAndempName">
+	<map>
+	<entry>
+	    <key>    
+	    <value>111 </value>
+	    </key>
+	    <value>Smith</value>
+	    </entry>
+	    
+	    <entry key="115">
+	       <value>John</value>    
+	    </entry>
+	    
+	    <entry key="467" value="Allen"> </entry>
+	 </map>
+	</property>
+   </bean>
+</beans>

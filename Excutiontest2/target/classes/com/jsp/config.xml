@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:c="http://www.springframework.org/schema/c"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<bean id="myStudent1" class="com.ty.Student">
+	<property name="studentid" value="101"></property>
+	<property name="studentname" value="xyz"></property>
+	<property name="marks" value="500"></property>
+	
+</bean>
+<bean id="myStudent2" class="com.ty.Student">
+	<property name="studentid" value="101"></property>
+	<property name="studentname" value="xyz"></property>
+	<property name="marks" value="500"></property>
+	
+</bean>
+<bean id="myStudent3" class="com.ty.Student">
+	<property name="studentid" value="101"></property>
+	<property name="studentname" value="xyz"></property>
+	<property name="marks" value="500"></property>
+	
+</bean>
+<bean id="myBranch1" class="com.ty.Branch">
+	<property name="branchid" value="101"></property>
+	<property name="branchname" value="branchone"></property>
+	<property name="details"  >
+	<list>
+	<ref bean="myStudent1"></ref>
+	<ref bean="myStudent2"></ref>
+	<ref bean="myStudent3"></ref>
+	
+	
+	</list>
+	</property>
+	
+</bean>
+<bean id="myBranch2" class="com.ty.Branch">
+	<property name="branchid" value="101"></property>
+	<property name="branchname" value="branchone"></property>
+		<property name="details"  >
+	<list>
+	<ref bean="myStudent1"></ref>
+	<ref bean="myStudent2"></ref>
+	<ref bean="myStudent3"></ref>
+	
+	
+	</list>
+	</property>
+	
+</bean>
+<bean id="myBranch3" class="com.ty.Branch">
+	<property name="branchid" value="101"></property>
+	<property name="branchname" value="branchone"></property>
+		<property name="details"  >
+	<list>
+	<ref bean="myStudent1"></ref>
+	<ref bean="myStudent2"></ref>
+	<ref bean="myStudent3"></ref>
+	
+	
+	</list>
+	</property>
+	
+</bean>
+
+<bean id="myCollege" class="com.ty.College">
+	<property name="collegename" value="vvv"></property>
+	<property name="location" value="bangalore"></property>
+		<property name="details"  >
+	<list>
+	<ref bean="myBranch1"></ref>
+	<ref bean="myBranch2"></ref>
+	<ref bean="myBranch3"></ref>
+	
+	
+	
+	</list>
+	</property>
+	</bean>
+</beans>
